@@ -9,7 +9,7 @@ Initial connection and authentication with AEM.
 
 MobileCore.setApplication(this);
 MobileCore.setLogLevel(LoggingMode.DEBUG);
-
+```
 try{
   Campaign.registerExtension();
   UserProfile.registerExtension();
@@ -26,11 +26,11 @@ try{
 } catch (InvalidInitException e) {
     Log.d("TEST", "exception");
 }
-
+```
 App.js
 Mechanism to register with pushid and receive the messages.
 
-
+```
 const register = async () => {
   if (!Firebase.apps.length) {
     await Firebase.initializeApp({
@@ -65,3 +65,4 @@ const register = async () => {
     });
   } 
 }
+```
